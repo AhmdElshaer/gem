@@ -2,36 +2,86 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { FreeMode, Pagination, Navigation } from "swiper";
+import { Autoplay, FreeMode, Navigation } from "swiper";
 
 
 const Highlights = () => {
   return(
-    <div className="h-screen flex flex-col gap-20 items-center mt-16 relative">
-      <p className="text-5xl font-bold">Highlights</p>
-      <p>Welcome to the very best of GEM</p>
+    <div className="h-screen flex flex-col items-center  mt-10 relative">
+      <div className="">
+      <p className="text-4xl font-bold mb-8">Highlights</p>
+      <p className="mb-8">Welcome to the very best of GEM</p>
+      </div>
       <Swiper
-        slidesPerView={'auto'}
+        slidesPerView={3.3}
         spaceBetween={30}
-        centeredSlides={true}
         freeMode={true}
-        pagination={{
-          clickable: true,
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
         navigation={true}
-        modules={[FreeMode, Pagination, Navigation]}
-        className="mySwiper h-3/5	w-full"
+        modules={[FreeMode, Navigation, Autoplay]}
+        className="mySwiper h-2/3	w-full"
+        style={{color: '#000000b3'}}
       >
         <SwiperSlide>
-          <img className='h-full' src={require('../../imgs/7.png')} alt='highlights'/>
-          
+          <div className="flex flex-col w-full h-full rounded zoom">
+            <div className="h-4/5 w-full truncate">
+              <img className='h-full w-full object-cover' src={require('../../imgs/7.png')} alt='highlights'/>
+            </div>
+            <div className="flex flex-col items-start h-1/5 w-full">
+              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
+              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
+            </div>
+          </div>
           </SwiperSlide>
-        <SwiperSlide><img className='h-full' src={require('../../imgs/2.png')} alt='highlights'/></SwiperSlide>
-        <SwiperSlide><img className='h-full' src={require('../../imgs/5.png')} alt='highlights'/></SwiperSlide>
-        <SwiperSlide><img className='h-full' src={require('../../imgs/8.png')} alt='highlights'/></SwiperSlide>
-        <SwiperSlide><img className='h-full' src={require('../../imgs/1.png')} alt='highlights'/></SwiperSlide>
+        <SwiperSlide>
+        <div className="flex flex-col w-full h-full rounded zoom">
+            <div className="h-4/5 w-full truncate">
+              <img className='h-full w-full object-cover' src={require('../../imgs/2.png')} alt='highlights'/>
+            </div>
+            <div className="flex flex-col items-start h-1/5 w-full">
+              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
+              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
+            </div>
+          </div>
+          </SwiperSlide>
+        <SwiperSlide>
+        <div className="flex flex-col w-full h-full rounded zoom">
+            <div className="h-4/5 w-full truncate">
+              <img className='h-full w-full object-cover' src={require('../../imgs/5.png')} alt='highlights'/>
+            </div>
+            <div className="flex flex-col items-start h-1/5 w-full">
+              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
+              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
+            </div>
+          </div>
+          </SwiperSlide>
+        <SwiperSlide>
+        <div className="flex flex-col w-full h-full rounded zoom">
+            <div className="h-4/5 w-full truncate">
+              <img className='h-full w-full object-cover' src={require('../../imgs/8.png')} alt='highlights'/>
+            </div>
+            <div className="flex flex-col items-start h-1/5 w-full">
+              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
+              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
+            </div>
+          </div>
+          </SwiperSlide>
+        <SwiperSlide>
+        <div className="flex flex-col w-full h-full rounded zoom">
+            <div className="h-4/5 w-full truncate">
+              <img className='h-full w-full object-cover' src={require('../../imgs/1.png')} alt='highlights'/>
+            </div>
+            <div className="flex flex-col items-start h-1/5 w-full">
+              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
+              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
+            </div>
+          </div>
+          </SwiperSlide>
       </Swiper>
     </div>
   )
