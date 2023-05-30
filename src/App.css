@@ -1,16 +1,22 @@
 body{
   font-family: 'Cairo', sans-serif;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  color: white;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white !important;
+  font-size: 22px !important;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: black;
   background-color: orange;
+  border-radius: 50%;
   transition: 1s;
 }
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  }
+
 .zoom:hover img{
   transform: scale(1.05);
   transition: 1s;
@@ -29,4 +35,31 @@ body{
 
 .ex-hover:hover .content{
   display: block;
+}
+
+header span:hover,
+li:hover,
+.about:hover{
+  color: #e35a00;
+}
+.nav li,
+.nav .about{
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+}
+.nav li::before,
+.nav .about::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e35a00;
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  transition: 1s;
+}
+.nav li:hover::before,
+.nav .about:hover:before {
+  left: 0;
 }

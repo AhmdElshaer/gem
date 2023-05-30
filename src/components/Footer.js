@@ -11,9 +11,10 @@ import OrangeButton from '../ui/OrangeButton';
 
 const Footer = () => {
   return(
-    <div>
-      <div className="flex flex-row w-full">
-        <div id="left" className=" w-1/2 flex flex-col items-center">
+    <footer className='relative z-40 bg-white'>
+      <div className="flex flex-col md:flex-row lg:flex-row w-full">
+
+        <div id="left" className="w-full md:w-1/2 lg:w-1/2 flex flex-col items-center">
           <div className='w-full flex justify-center items-center mb-2'>
             <img className='h-36 w-36 object-cover' src={require('../imgs/Group 13642.png')} alt='logo'/>
           </div>
@@ -37,11 +38,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div id="right" className="text-stone-700 w-1/2 bg-stone-100 flex flex-col px-14 justify-center">
-          <div className='mb-4 flex flex-row justify-between items-start'>
+        <div id="right" className="nav text-stone-700 w-full md:w-1/2 lg:w-1/2 bg-stone-100 flex flex-col py-8 px-14 justify-center">
+          <div className='mb-4 flex flex-row justify-between md:px-10 md:px-10 items-start'>
+
             <div className='flex flex-col gap-4'>
-              <p className='font-bold'>About The GEM</p>
-              <ul className='text-stone-600 text-xs font-bold flex flex-col gap-4'>
+              <p className='about font-bold'>About The GEM</p>
+              <ul className='relative text-stone-600 text-xs font-bold flex flex-col gap-4'>
                 <li>The GEM Story</li>
                 <li>Mission and Vision</li>
                 <li>Partners</li>
@@ -49,6 +51,7 @@ const Footer = () => {
                 <li>Board Of Directors</li>
               </ul>
             </div>
+            
             <div className='font-bold'>
               <ul className='flex flex-col gap-3'>
                 <li>Contact Us</li>
@@ -65,10 +68,10 @@ const Footer = () => {
           </div>
       </div>
 
-      <div className='copy-rights px-4 text-xs'>
-        <div className='flex flex-row justify-between items-center'>
+      <div className='copy-rights px-4 text-xs '>
+        <div className='flex flex-col md:flex-row lg:flex-row justify-between items-center'>
           <div >
-            <ul className='flex flex-row gap-4 px-4'>
+            <ul className='flex flex-row gap-4 px-4 md:text-sm lg:text-sm'>
               <li>Privacy Policy</li>
               <li>Cookies</li>
               <li>Terms of use</li>
@@ -86,7 +89,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-    </div>
+    </footer>
 
   )
 }

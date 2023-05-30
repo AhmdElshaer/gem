@@ -5,8 +5,7 @@ import Highlights from "../components/home/Highlights";
 import Landing from "../components/home/Landing";
 import Panner from "../components/home/Panner"
 import DoubleCards from "../ui/DoubleCards";
-import OrangeButton from "../ui/OrangeButton";
-// import "../imgs/Path 2243.png";
+
 
 const Home = () => {
   const content1S1 = 'GEM has so much to offer kids and their families. Have fun together at the museum and online.';
@@ -26,9 +25,6 @@ const Home = () => {
   return(
     <div>
     <Panner />
-    <div className='fixed text-center bottom-5 z-10 mx-0 w-full' style={{transform: 'translate: (-50%, 0)'}}>
-    <OrangeButton text='BUY TICKETS'/>
-    </div>
     <Highlights />
     <Collections />
     <Landing />
@@ -58,7 +54,6 @@ const Home = () => {
       Link2='#'
       />
       <Footer />
-    {/* <div className="h-screen"></div> */}
     </div>
   )
 }

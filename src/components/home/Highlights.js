@@ -8,14 +8,26 @@ import { Autoplay, FreeMode, Navigation } from "swiper";
 
 const Highlights = () => {
   return(
-    <div className="h-screen flex flex-col items-center  mt-10 relative">
-      <div className="">
+    <div className="h-screen flex flex-col items-center z-30 bg-white mt-10 relative">
+      <div className="flex flex-col justify-center items-center">
       <p className="text-4xl font-bold mb-8">Highlights</p>
       <p className="mb-8">Welcome to the very best of GEM</p>
       </div>
       <Swiper
-        slidesPerView={3.3}
-        spaceBetween={30}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3.3,
+            spaceBetween: 30,
+          },
+        }}
         freeMode={true}
         loop={true}
         autoplay={{
@@ -24,7 +36,7 @@ const Highlights = () => {
         }}
         navigation={true}
         modules={[FreeMode, Navigation, Autoplay]}
-        className="mySwiper h-2/3	w-full"
+        className="mySwiper h-4/5	w-full"
         style={{color: '#000000b3'}}
       >
         <SwiperSlide>
