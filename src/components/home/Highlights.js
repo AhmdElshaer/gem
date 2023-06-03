@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Autoplay, FreeMode, Navigation } from "swiper";
 
 
-const Highlights = () => {
+const Highlights = (props) => {
   return(
     <div className="h-screen flex flex-col items-center z-30 bg-white mt-10 relative">
       <div className="flex flex-col justify-center items-center">
@@ -39,61 +39,19 @@ const Highlights = () => {
         className="mySwiper h-4/5	w-full"
         style={{color: '#000000b3'}}
       >
-        <SwiperSlide>
+        {props.props.map((item) => (
+          <SwiperSlide key={item.id}>
           <div className="flex flex-col w-full h-full rounded zoom">
             <div className="h-4/5 w-full truncate">
-              <img className='h-full w-full object-cover' src={require('../../imgs/7.png')} alt='highlights'/>
+              <img className='h-full w-full object-cover' src={item.banner} alt='highlights'/>
             </div>
             <div className="flex flex-col items-start h-1/5 w-full">
-              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
-              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
+              <p className="font-bold text-xl w-full h-1/2">{item.title}</p>
+              <p className="px-0 w-full h-1/2 text-xs">{item.details}</p>
             </div>
           </div>
           </SwiperSlide>
-        <SwiperSlide>
-        <div className="flex flex-col w-full h-full rounded zoom">
-            <div className="h-4/5 w-full truncate">
-              <img className='h-full w-full object-cover' src={require('../../imgs/2.png')} alt='highlights'/>
-            </div>
-            <div className="flex flex-col items-start h-1/5 w-full">
-              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
-              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
-            </div>
-          </div>
-          </SwiperSlide>
-        <SwiperSlide>
-        <div className="flex flex-col w-full h-full rounded zoom">
-            <div className="h-4/5 w-full truncate">
-              <img className='h-full w-full object-cover' src={require('../../imgs/5.png')} alt='highlights'/>
-            </div>
-            <div className="flex flex-col items-start h-1/5 w-full">
-              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
-              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
-            </div>
-          </div>
-          </SwiperSlide>
-        <SwiperSlide>
-        <div className="flex flex-col w-full h-full rounded zoom">
-            <div className="h-4/5 w-full truncate">
-              <img className='h-full w-full object-cover' src={require('../../imgs/8.png')} alt='highlights'/>
-            </div>
-            <div className="flex flex-col items-start h-1/5 w-full">
-              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
-              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
-            </div>
-          </div>
-          </SwiperSlide>
-        <SwiperSlide>
-        <div className="flex flex-col w-full h-full rounded zoom">
-            <div className="h-4/5 w-full truncate">
-              <img className='h-full w-full object-cover' src={require('../../imgs/1.png')} alt='highlights'/>
-            </div>
-            <div className="flex flex-col items-start h-1/5 w-full">
-              <p className="font-bold text-xl w-full h-1/2">Not a coincidence</p>
-              <p className="px-0 w-full h-1/2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga eum eligendi quasi odio sed</p>
-            </div>
-          </div>
-          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   )

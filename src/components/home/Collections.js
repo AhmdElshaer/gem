@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import classes from './Collections.module.css';
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -8,13 +7,10 @@ import { Autoplay, FreeMode, Navigation } from "swiper";
 import HoverButton from "../../ui/HoverButton";
 import CollectionsCard from "../../ui/CollectionsCard";
 
-const Collections = () => {
-  const title = 'Grand Staircase';
-  const para = 'Gaze upon the faces of kings, queens and deities of ancient Egypt at the Grand Stairs.';
-  const className = `${classes.collections} md:h-screen lg:h-screen z-30 bg-white flex flex-col items-center py-5 relative px-2`;
+const Collections = (props) => {
 
   return(
-    <div className={className}>
+    <div className='md:h-screen lg:h-screen z-30 bg-white flex flex-col items-center py-5 relative px-2'>
       <p className="text-4xl font-bold mb-8">Collections</p>
       <p className="mb-8">A Deep-Dive the Egyptian Culture</p>
       <div className="h-screen md:h-3/5 lg:h-3/5 w-full relative">
@@ -42,24 +38,14 @@ const Collections = () => {
         modules={[FreeMode, Navigation, Autoplay]}
         className="mySwiper h-screen md:h-full lg:h-full w-full"
       >
-        <SwiperSlide>
+        {props.props.map((item) => (
+          <SwiperSlide key={item.id}>
           <div className='h-full w-full rounded relative flex flex-col md:flex-row lg:flex-row justify-end'>
-            <img className='h-full w-full md:w-2/3 lg:w-2/3 rounded object-cover' src={require('../../imgs/4.png')} alt='highlights'/>
-            <CollectionsCard title={title} para={para} />
+            <img className='h-full w-full md:w-2/3 lg:w-2/3 rounded object-cover' src={item.banner} alt='collictions'/>
+            <CollectionsCard title={item.title} para={item.details} />
           </div>
           </SwiperSlide>
-        <SwiperSlide>
-          <div className='h-full w-full rounded relative flex flex-col md:flex-row lg:flex-row justify-end'>
-            <img className='h-full w-full md:w-2/3 lg:w-2/3 rounded object-cover' src={require('../../imgs/3.png')} alt='highlights'/>
-            <CollectionsCard title={title} para={para} />
-          </div>
-          </SwiperSlide>
-        <SwiperSlide>
-          <div className='h-full w-full rounded relative flex flex-col md:flex-row lg:flex-row justify-end'>
-            <img className='h-full w-full md:w-2/3 lg:w-2/3 rounded object-cover' src={require('../../imgs/6.png')} alt='highlights'/>
-            <CollectionsCard title={title} para={para} />
-          </div>
-          </SwiperSlide>
+        ))}
         </Swiper>
       </div>
       <div className="mt-4">

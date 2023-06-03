@@ -1,7 +1,0 @@
-.collections .swiper-button-next::after,
-.collections .swiper-button-prev::after {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  background-color: #e35a00;
-}

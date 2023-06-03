@@ -63,3 +63,24 @@ li:hover,
 .nav .about:hover:before {
   left: 0;
 }
+
+.active {
+  color: black;
+}
+
+@media (min-width:641px) {
+  .childMuseum {
+    height: 78vh;
+  }
+}
+@media (min-width:641px) {
+  .conser {
+    height: 78vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .museumBanner {
+    font-size: 0.8rem;
+  }
+}
