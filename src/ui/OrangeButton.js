@@ -2,7 +2,8 @@
 
 const OrangeButton = ({text}) => {
   return(
-    <button className="w-36 text-white bg-orange-500 h-10 rounded font-bold text-sm">{text}</button>
+    // <button className="orangeButton relative  w-36 text-white bg-orange-500 h-10 hover:bg-transparent hover:text-orange-500 rounded font-bold text-sm">{text}</button>
+    <button className="orangeButton relative md:w-36 lg:w-36 text-white bg-orange-500 h-10 hover:bg-transparent hover:text-orange-500 rounded font-bold text-xs">{text}</button>
   )
 }
 

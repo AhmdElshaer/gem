@@ -18,6 +18,8 @@ export function museumLoader () {
   return getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/museum-page');
 };
 
-
+export function museumCollections () {
+  return getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections-page')
+}
 
 

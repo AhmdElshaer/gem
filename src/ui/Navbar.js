@@ -41,15 +41,21 @@ const Navbar = () => {
           </ul>
           </div>
 
-          <NavLink to='/museum' className='w-full md:w-auto'>
-            <div onMouseEnter={() => setMuseumIsShown(true)} onMouseLeave={() => setMuseumIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
+          
+            <div 
+            onMouseEnter={() => setMuseumIsShown(true)} 
+            onMouseLeave={() => setMuseumIsShown(false)}
+            className='w-full md:w-auto relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
+
               <div className='flex justify-between items-center w-full'>
-                <span className='mr-2'>MUSEUM</span>
+                <NavLink to='/museum' className='mr-2'>Museum</NavLink>
                 <MdKeyboardArrowDown/>
               </div>
               <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-32 lg:-bottom-32 z-40 bg-white md:w-40 lg:w-40 w-full py-2 mt-2 rounded-lg shadow-xl ${museumIsShown ? "block" : "hidden"}`}>
                 <li className="flex w-full items-center px-3 py-2 text-sm">
+                <NavLink to='/museum/collections'>
                   Collections
+                </NavLink>
                 </li>
                 <li className="flex w-full items-center px-3 py-2 text-sm">
                   Children's Museum
@@ -59,7 +65,6 @@ const Navbar = () => {
                 </li>
             </ul>
           </div>
-            </NavLink>
 
           <div onMouseEnter={() => setExpIsShown(true)} onMouseLeave={() => setExpIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             <div className='flex justify-between items-center w-full'>

@@ -2,8 +2,8 @@
 
 const HoverButton = ({text}) => {
   return(
-    <div>
-      <button className='w-36 text-orange-500 font-semibold font-orange-500 bg-white h-10 rounded hover:bg-orange-600 hover:text-white border border-orange-600'>{text}</button>
+    <div className="hoverButton relative">
+      <button className='w-36 h-10 text-orange-500 font-semibold font-orange-500 rounded hover:text-white border border-orange-500'>{text}</button>
     </div>
   )
 }

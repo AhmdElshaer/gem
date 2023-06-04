@@ -7,7 +7,7 @@ const Banner = ({image, title, description}) => {
   return(
     <div className="z-30 w-full flex relative flex-col justify-center items-center">
 
-      <div className="relative h-screen w-full flex justify-center items-center">
+      <div className="relative h-[90vh] w-full flex justify-center items-center">
         <div className="bg-black absolute w-full h-full opacity-40 truncate"></div>
         <img className='h-full w-full object-cover' src={image} alt='collictions'/>
         

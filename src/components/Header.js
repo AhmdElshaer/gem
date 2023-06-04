@@ -1,6 +1,6 @@
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { useState } from 'react';
-import Navbar from './Navbar';
+import Navbar from '../ui/Navbar';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {

@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Autoplay, FreeMode, Navigation } from "swiper";
 import HoverButton from "../../ui/HoverButton";
 import CollectionsCard from "../../ui/CollectionsCard";
+import { NavLink } from "react-router-dom";
 
 const Collections = (props) => {
 
@@ -48,9 +49,9 @@ const Collections = (props) => {
         ))}
         </Swiper>
       </div>
-      <div className="mt-4">
+      <NavLink to='/museum/collections' className="mt-4">
         <HoverButton text="See All"/>
-      </div>
+      </NavLink>
     </div>
   )
 }
