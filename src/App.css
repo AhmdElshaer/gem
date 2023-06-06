@@ -1,5 +1,10 @@
+html{
+  scroll-behavior: smooth;
+
+}
 body{
   font-family: 'Cairo', sans-serif;
+  scroll-behavior: smooth;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -109,7 +114,7 @@ li:hover,
 
 .orangeButton{
   overflow: hidden;
-  transition: 0.7s;
+  transition: 1s;
 }
 
 .orangeButton::before{
@@ -120,11 +125,23 @@ li:hover,
   position: absolute;
   left: 0;
   top: -100%;
-  transition: 0.7s;
+  transition: 0.8s;
   border-radius: 4px;
   z-index: -1;
 }
 
 .orangeButton:hover::before{
   top: 0;
+}
+
+.collSwiper .swiper-pagination-bullet {
+  width:100px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #e35a00!important;
+  margin: 0 15px!important;
+}
+
+.collSwiper .swiper-pagination-bullet-active {
+  background-color: #e35a00!important;
 }

@@ -28,6 +28,7 @@ const Highlights = (props) => {
             spaceBetween: 30,
           },
         }}
+        speed={1200}
         freeMode={true}
         loop={true}
         autoplay={{

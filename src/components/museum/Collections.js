@@ -18,6 +18,7 @@ const Collections = ({title, description, collections}) => {
           <Swiper
             breakpoints={{640: { slidesPerView: 1.5, spaceBetween: 30,}, 768: { slidesPerView: 2.5, spaceBetween: 30,}, 1024: {slidesPerView: 3.3, spaceBetween: 30,},}}
             freeMode={true}
+            speed={1200}
             loop={true}
             autoplay={{ delay: 7000, disableOnInteraction: false,}}
             navigation={true}

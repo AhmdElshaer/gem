@@ -10,7 +10,7 @@ const Banner = (props) => {
   return(
     <div className="relative text-white mx-1 z-30" style={{height: 'calc(100vh - 130px)'}}>
 
-      <Swiper loop={true} navigation={true} autoplay={{delay: 2500, disableOnInteraction: false,}} pagination={{clickable: true,}} modules={[Navigation, Autoplay, Pagination]} className="relative mySwiper h-full">
+      <Swiper loop={true} speed={1200} navigation={true} autoplay={{delay: 2500, disableOnInteraction: false,}} pagination={{clickable: true,}} modules={[Navigation, Autoplay, Pagination]} className="relative mySwiper h-full">
         {props.props.map((item) => (
           <SwiperSlide key={item.id}>
             <img className='h-full w-full object-cover' src={item.image} alt='panner'/>

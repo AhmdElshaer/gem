@@ -30,6 +30,7 @@ const Collections = (props) => {
             spaceBetween: 50,
           },
         }}
+        speed={1200}
         freeMode={true}
         autoplay={{
           delay: 3500,

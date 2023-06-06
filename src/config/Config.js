@@ -22,4 +22,8 @@ export function museumCollections () {
   return getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections-page')
 }
 
+export function CollectionItemLoader ({params}) {
+  const id = params.itemId
 
+  return getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/${id}/details`);
+}

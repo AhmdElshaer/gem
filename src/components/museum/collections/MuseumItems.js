@@ -1,12 +1,12 @@
+import { NavLink } from "react-router-dom";
 import OrangeButton from "../../../ui/OrangeButton";
 
 const MuseumItems = (props) => {
-  console.log(props);
   return(
     <div className='container mx-auto flex flex-col gap-8 my-6 px-3 '>
       {props.props.map((item, index) => (
         
-      <div key={item.id} className=' flex relative flex-col odd:md:flex-row even:md:flex-row-reverse w-full h-100vh md:h-[50vh] lg:h-[50vh] truncate whitespace-normal' >
+      <div id={item.title.trim()} key={item.id} className=' flex relative flex-col odd:md:flex-row even:md:flex-row-reverse w-full h-100vh md:h-[50vh] lg:h-[50vh] truncate whitespace-normal' >
 
         <div className="md:h-full lg:h-full w-full md:w-2/3 truncate">
           <img className='md:h-full lg:h-full w-full object-cover' src={item.thubmnail} alt='gempic'/>
@@ -18,9 +18,9 @@ const MuseumItems = (props) => {
             <span className="">{item.title}</span>
             </p>
           <p className="px-0 w-full text-stone-600 font-semibold text-xs md:text-sm md:leading-relaxed text-ellipsis overflow-hidden ... leading-relaxed">{item.description}</p>
-          
-          <OrangeButton text="Discover More" />
-          
+          <NavLink to={`${item.id}`}>
+            <OrangeButton text="Discover More" />
+          </NavLink>
           </div>
 
       </div>
