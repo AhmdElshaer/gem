@@ -24,11 +24,11 @@ const Navbar = () => {
           <div onMouseEnter={() => setVisitIsShown(true)} onMouseLeave={() => setVisitIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             
             <div className='flex justify-between items-center w-full'>
-              <span className='mr-2'>VISIT</span>
+              <span className='mr-2 z-50'>VISIT</span>
               <MdKeyboardArrowDown/>
             </div>
 
-            <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-32 lg:-bottom-32 z-40 bg-white md:w-40 lg:w-40 w-full py-2 mt-2 rounded-lg shadow-xl ${visitIsShown ? "block" : "hidden"}`}>
+            <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-32 lg:-bottom-32 z-40 bg-white md:w-40 lg:w-40 w-full py-4 mt-2 rounded-lg shadow-xl ${visitIsShown ? "block" : "hidden"}`}>
               <li className="flex w-full items-center px-3 py-2 text-sm">
                 Opening Hours
               </li>
@@ -48,10 +48,10 @@ const Navbar = () => {
             className='w-full md:w-auto relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
 
               <div className='flex justify-between items-center w-full'>
-                <NavLink to='/museum' className='mr-2'>Museum</NavLink>
+                <NavLink to='/museum' className='mr-2 z-50'>Museum</NavLink>
                 <MdKeyboardArrowDown/>
               </div>
-              <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-32 lg:-bottom-32 z-40 bg-white md:w-40 lg:w-40 w-full py-2 mt-2 rounded-lg shadow-xl ${museumIsShown ? "block" : "hidden"}`}>
+              <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-32 lg:-bottom-32 z-40 bg-white md:w-40 lg:w-40 w-full py-4 mt-2 rounded-lg shadow-xl ${museumIsShown ? "block" : "hidden"}`}>
                 <li className="flex w-full items-center px-3 py-2 text-sm">
                 <NavLink to='/museum/collections'>
                   Collections
@@ -68,10 +68,10 @@ const Navbar = () => {
 
           <div onMouseEnter={() => setExpIsShown(true)} onMouseLeave={() => setExpIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             <div className='flex justify-between items-center w-full'>
-              <span className='mr-2'>THE GEM EXPERIENCE</span>
+              <span className='mr-2 z-50'>THE GEM EXPERIENCE</span>
               <MdKeyboardArrowDown/>
             </div>
-            <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-48 lg:-bottom-48 z-40 bg-white md:w-40 lg:w-40 w-full py-2 mt-2 rounded-lg shadow-xl ${expIsShown ? "block" : "hidden"}`}>
+            <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-48 lg:-bottom-48 z-40 bg-white md:w-40 lg:w-40 w-full py-4 mt-2 rounded-lg shadow-xl ${expIsShown ? "block" : "hidden"}`}>
               <li className="flex w-full items-center px-3 py-2 text-sm">
                 Dine
               </li>
@@ -92,10 +92,10 @@ const Navbar = () => {
 
           <div onMouseEnter={() => setWhatIsShown(true)} onMouseLeave={() => setWhatIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             <div className='flex justify-between items-center w-full'>
-              <span className='mr-2' >WHAT'S ON</span>
+              <span className='mr-2 z-50' >WHAT'S ON</span>
               <MdKeyboardArrowDown/>
             </div>
-            <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-20 lg:-bottom-20 z-40 bg-white md:w-40 lg:w-40 w-full py-1 mt-2 rounded-lg shadow-xl ${whatIsShown ? "block" : "hidden"}`}>
+            <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-20 lg:-bottom-20 z-40 bg-white md:w-40 lg:w-40 w-full py-4 mt-2 rounded-lg shadow-xl ${whatIsShown ? "block" : "hidden"}`}>
               <li className="flex w-full items-center px-3 py-2 text-sm">
                 Calender
               </li>

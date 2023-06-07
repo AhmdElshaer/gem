@@ -13,7 +13,7 @@ const DoubleCards = (props) => {
         <div className='md:h-full lg:h-full w-full md:w-1/2 lg:w-1/2 bg-stone-100 flex flex-col justify-center items-start py-4 px-8'>
           <p className='text-orange-500 font-bold text-xl mb-3'>{item.title}</p>
           <p className='mb-3 text-slate-400 text-sm md:text-md lg:text-md'>{item.details}</p>
-          <a href='#' className='hover:text-orange-500 text-xs md:text-sm lg:text-sm underline underline-offset-2 text-slate-500'>{item.learn_more_txt}</a>
+          <a href='#museum' className='hover:text-orange-500 text-xs md:text-sm lg:text-sm underline underline-offset-2 text-slate-500'>{item.learn_more_txt}</a>
         </div>
       </div>
       ))}

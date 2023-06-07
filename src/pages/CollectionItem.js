@@ -55,7 +55,7 @@ const CollectionItem = () => {
         <div className="grid relative gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
           {collectionItemData.data.highlights.map((item) => (
             <div key={item.id} className="relative aspect-square truncate">
-              <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collictions'/>
+              <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>
 
               <div className="h-[110%] w-full p-4 absolute bottom-[-8%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
                 <p className="font-bold">{item.title}</p>

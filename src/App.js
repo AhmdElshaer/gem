@@ -6,7 +6,7 @@ import { CollectionItemLoader, homeLoader, museumCollections, museumLoader, sear
 import Museum from './pages/Museum';
 import MuseumCollections from './pages/MuseumCollections';
 import CollectionItem from './pages/CollectionItem';
-import SearchCollections from './components/museum/collections/SearchCollections';
+import SearchCollections from './pages/SearchCollections';
 
 const router = createBrowserRouter([
   {path: '/', element: <RootLayout />, children: [

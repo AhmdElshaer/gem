@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import SearchBanner from "../components/museum/collections/collectionsSearch/SearchBanner";
 
 
 const SearchCollections = () => {
@@ -6,12 +7,7 @@ const SearchCollections = () => {
   console.log(searchItem);
 
   return(
-    <div className="flex flex-col h-[85vh] items-center">
-      <p className="font-bold text-xl">Collections Search</p>
-      <form>
-        
-      </form>
-    </div>
+    <SearchBanner />
   )
 }
 
