@@ -2,10 +2,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import RootLayout from './pages/RootLayout';
-import { CollectionItemLoader, homeLoader, museumCollections, museumLoader } from './config/Config';
+import { CollectionItemLoader, homeLoader, museumCollections, museumLoader, searchAll } from './config/Config';
 import Museum from './pages/Museum';
 import MuseumCollections from './pages/MuseumCollections';
 import CollectionItem from './pages/CollectionItem';
+import SearchCollections from './components/museum/collections/SearchCollections';
 
 const router = createBrowserRouter([
   {path: '/', element: <RootLayout />, children: [
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       {path: 'collections', children: [
         {index: true, element: <MuseumCollections />, loader: museumCollections},
         {path: ':itemId', element: <CollectionItem />,loader: CollectionItemLoader},
+        {path: 'search',element: <SearchCollections />, loader: searchAll}
       ]},
     ]},
   ]}

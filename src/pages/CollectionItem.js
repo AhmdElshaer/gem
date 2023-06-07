@@ -9,9 +9,8 @@ import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const CollectionItem = () => {
   const collectionItemData = useLoaderData();
-  console.log(collectionItemData.data.title);
   return(
-    <div className="container mx-auto flex flex-col justify-center items-center">
+    <div className="container mx-auto flex flex-col justify-center items-center mb-16">
 
       <div className="breadCrumb w-full flex justify-start items-center p-2 gap-3 font-semibold">
         <span className="hover:bg-orange-500 hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><NavLink to='..'><FaArrowLeft /></NavLink></span>
@@ -35,12 +34,12 @@ const CollectionItem = () => {
         pagination={true}
         speed={1200}
         modules={[FreeMode, Pagination, Autoplay]}
-        className="collSwiper md:h-[40vh] lg:h-[60vh] w-full mb-8"
+        className="collSwiper aspect-square md:h-[40vh] lg:h-[60vh] w-full mb-8 "
       >
         {collectionItemData.data.slides.map((item) => (
           <SwiperSlide key={item.id}>
 
-          <div className='h-full w-full rounded relative flex'>
+          <div className='h-full w-full rounded relative flex px-2'>
             <img className='h-full w-full rounded-lg object-cover' src={item.image} alt='collictions'/>
             <div className="w-full absolute bottom-0 text-white p-8 flex flex-col gap-6">
               <p className="font-bold">{item.title}</p>
@@ -51,16 +50,16 @@ const CollectionItem = () => {
         ))}
         </Swiper>
       
-      <div className="highlights w-full flex flex-col justify-center items-start">
+      <div className="highlights w-full flex flex-col justify-center items-start px-2">
         <p className="text-3xl font-bold mb-8 text-stone-700">Highlights</p>
-        <div className="grid relative gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid relative gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
           {collectionItemData.data.highlights.map((item) => (
-            <div key={item.id} className="h-[300px] w-[300px]">
+            <div key={item.id} className="relative aspect-square truncate">
               <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collictions'/>
 
-              <div className="absolute  flex flex-col ">
-                <p>{item.title}</p>
-                <p>See More Details</p>
+              <div className="h-[110%] w-full p-4 absolute bottom-[-8%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
+                <p className="font-bold">{item.title}</p>
+                <p className="underline underline-offset-3 text-sm">See More Details</p>
               </div>
             </div>
         ))}

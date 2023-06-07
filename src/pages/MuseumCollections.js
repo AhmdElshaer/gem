@@ -6,7 +6,6 @@ import MuseumItems from "../components/museum/collections/MuseumItems";
 
 const MuseumCollections = () => {
   const museumCollections = useLoaderData();
-  // console.log(museumCollections.data);
   return(
     <>
       <CollBanner 
