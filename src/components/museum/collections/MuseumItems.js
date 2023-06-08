@@ -12,7 +12,7 @@ const MuseumItems = (props) => {
           <img className='md:h-full lg:h-full w-full object-cover' src={item.thubmnail} alt='gempic'/>
         </div>
 
-        <div key={item.id} className={`${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} md:absolute md:top-1/2 md:-translate-y-1/2 flex flex-col items-start gap-3 h-1/2 w-full md:w-[43%] p-8 bg-white`}>
+        <div key={item.id} className={`${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} md:absolute md:top-1/2 md:-translate-y-1/2 flex flex-col items-start gap-3 h-[60%] w-full md:w-[43%] p-8 bg-white`}>
           <p className="font-bold flex text-orange-500 text-xl w-full gap-2 justify-start items-center">
             <img className="h-[2rem] object-cover " src={item.icon} alt="collections_icon"/>
             <span className="">{item.title}</span>
