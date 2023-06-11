@@ -6,8 +6,6 @@ const HighlightsDetails = () => {
   const navigate = useNavigate();
   const highlightItemData = useLoaderData();
 
-  console.log(highlightItemData.data);
-
   return(
     <div className="container mx-auto flex flex-col flex-wrab gap-10 justify-center items-start p-4 mb-16">
 

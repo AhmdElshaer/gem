@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useSearchParams, json, NavLink } from "react-router-dom";
+import { useSearchParams, NavLink, useRouteError, isRouteErrorResponse } from "react-router-dom";
 
 
 const SearchResults = () => {
   
   const [collectionsSearch, setCollectionsSearch] = useState([]);
+  const [hasError, setIsError] = useState(false);
+  const error = useRouteError();
 
   let [searchParams] = useSearchParams();
   
@@ -20,17 +22,17 @@ const SearchResults = () => {
 
     async function collectionSearch () {
 
-      const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=${keyword}&theme_id=${theme}&period_id=${period}&material_id=${material}&category_id=${category}&provenance_id=${provenance}&gallery_id=${gallery}&collection_id=`);
+      const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=${keyword}&theme_id=${theme}&period_id=${period}&material_id=${material}&category_id=${category}&provenance_id=${provenance}&gallery_id=${gallery}`);
       if (!response.ok) {
-        throw json({ message: 'Could not fetch .' });
+        setIsError(true);
       } else {
+        setIsError(false);
         const resData = await response.json();
         setCollectionsSearch(resData.data);
       }}
     collectionSearch()
   },[searchParams]);
   
-
   return (
     <div className="highlights w-full flex flex-col justify-center items-start px-2 container mx-auto my-4">
         <p className="text-lg mb-8 font-semibold text-stone-700">
@@ -39,7 +41,7 @@ const SearchResults = () => {
         
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
 
-          {collectionsSearch.length === 0 ? (<p className="absolute font-bold left-1/2 translate-x-[-50%] text-xl w-[200px]">There Is No Collections</p>) 
+          {collectionsSearch.length === 0 || hasError || isRouteErrorResponse(error) ? (<p className="absolute font-bold left-1/2 translate-x-[-50%] text-xl w-[200px]">There Is No Collections</p>) 
           : collectionsSearch.map((item) => (
             <div key={item.id} className="relative aspect-square truncate">
               <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>

@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import RootLayout from './pages/RootLayout';
-import { CollectionItemLoader, collectionSearch, highlightItemLoader, homeLoader, museumCollections, museumLoader } from './config/Config';
+import { CollectionItemLoader, highlightItemLoader, homeLoader, museumCollections, museumLoader } from './config/Config';
 import Museum from './pages/Museum';
 import MuseumCollections from './pages/MuseumCollections';
 import CollectionItem from './pages/CollectionItem';

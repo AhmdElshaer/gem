@@ -60,19 +60,3 @@ export function highlightItemLoader ({params}) {
   return getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/highlights/${id}/details`)
 }
 
-export function Filter (filterType) {
-  return getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/${filterType}`);
-  // let filterData = [];
-  // async function getData () {
-  //     const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/${filterType}`);
-  //     if (!response.ok) {
-  //       throw json({ message: 'Could not fetch .' });
-  //     } else {
-  //       const resData = await response.json();
-  //       filterData.push(...resData.data);
-  //     }
-  //   }
-  //   getData();
-  //   return filterData;
-}
-
