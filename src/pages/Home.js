@@ -5,6 +5,8 @@ import Highlights from "../components/home/Highlights";
 import Landing from "../components/home/Landing";
 import DoubleCards from "../ui/DoubleCards";
 import Banner from "../components/home/Banner";
+import OrangeButton from "../ui/OrangeButton";
+import ScrollTopButton from "../ui/ScrollTopButton";
 
 
 const Home = () => {
@@ -20,6 +22,10 @@ const Home = () => {
     <DoubleCards 
       props={home.data.home_sections}
       />
+    <div className='fixed flex justify-end items-end px-4 text-center bottom-0 z-20 mx-0 w-full py-8 bg-gradient-to-t from-white' style={{transform: 'translate: (-50%, 0)', gap: 'calc(50% - 120px)'}}>
+      <OrangeButton text='BUY TICKETS'/>
+      <ScrollTopButton />
+  </div>
     </>
   )
 }

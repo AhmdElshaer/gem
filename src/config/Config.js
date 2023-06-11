@@ -28,12 +28,24 @@ export function CollectionItemLoader ({params}) {
   return getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/${id}/details`);
 }
 
-export async function collectionSearch () {
+
+
+export async function collectionsFilters () {
   let params = new URL(document.location).searchParams;
   let keyword = params.get("keyword");
 
+  async function collsSearch () {
+    const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=${keyword}`);
+    if (!response.ok) {
+      throw json({ message: 'Could not fetch .' });
+    } else {
+      const resData = await response.json();
+      return resData.data;
+    }
+  }
+
   return defer({
-    collectionsSearch: await getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=${keyword}`),
+    collsSearch: await collsSearch(),
     catFilter: await getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/categories'),
     ThemesFilter: await getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/themes'),
     PeriodsFilter: await getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/periods'),
@@ -41,6 +53,11 @@ export async function collectionSearch () {
     ProvFilter: await getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/provenances'),
     galFilter: await getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filters/galleries'),
   });
+}
+
+export function highlightItemLoader ({params}) {
+  const id = params.highlightId;
+  return getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/highlights/${id}/details`)
 }
 
 export function Filter (filterType) {

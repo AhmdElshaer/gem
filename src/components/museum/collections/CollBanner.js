@@ -8,7 +8,7 @@ const CollBanner = ({image, title, description}) => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    navigate(`search/?keyword=${searchValue.current.value}`);
+    navigate(`collections-search/?keyword=${searchValue.current.value}&theme_id=&period_id=&material_id=&category_id=&provenance_id=&gallery_id=&collection_id=`);
     // console.log(searchValue.current.value);
   }
 

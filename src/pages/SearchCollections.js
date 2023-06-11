@@ -4,8 +4,8 @@ import SearchResults from "../components/museum/collections/collectionsSearch/Se
 
 
 const SearchCollections = () => {
-  const { collectionsSearch, catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFilter, galFilter } = useLoaderData();
-  console.log(catFilter);
+  const { catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFilter, galFilter } = useLoaderData();
+  // console.log(collectionsSearch);
 
   return(
     <>
@@ -18,7 +18,7 @@ const SearchCollections = () => {
       galFilter={galFilter.data}
       
       />
-      <SearchResults collectionsSearch={collectionsSearch}/>
+      <SearchResults/>
     </>
   )
 }
