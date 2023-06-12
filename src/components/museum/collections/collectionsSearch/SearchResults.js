@@ -22,7 +22,9 @@ const SearchResults = () => {
 
     async function collectionSearch () {
 
-      const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=${keyword}&theme_id=${theme}&period_id=${period}&material_id=${material}&category_id=${category}&provenance_id=${provenance}&gallery_id=${gallery}`);
+      // const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=${keyword}&theme_id=${theme}&period_id=${period}&material_id=${material}&category_id=${category}&provenance_id=${provenance}&gallery_id=${gallery}`);
+
+      const response = await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?${keyword ? `keyword=${keyword}` : ''}${theme ? `&theme_id=${theme}` : ''}${period ? `&period_id=${period}` : ''}${material ? `&material_id=${material}` : ''}${category ? `&category_id=${category}` : ''}${provenance ? `&provenance_id=${provenance}` : ''}${gallery ? `&gallery_id=${gallery}` : ''}`);
       if (!response.ok) {
         setIsError(true);
       } else {
@@ -57,7 +59,7 @@ const SearchResults = () => {
         ))}
           
         </div>
-        <p className="font-bold text-md w-full text-center my-10 underline hover:text-orange-500 ease-in duration-300">See More Collections</p>
+        <p className="font-bold text-md w-full text-center my-10 underline hover:text-orange-500 ease-in duration-300"><NavLink to={'/museum/collections/main-galleries'}>See More Collections</NavLink></p>
       </div>
   )
 }

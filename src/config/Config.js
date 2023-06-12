@@ -28,7 +28,9 @@ export function CollectionItemLoader ({params}) {
   return getData(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/${id}/details`);
 }
 
-
+export function MainGalleryLoader () {
+  return getData('https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/all');
+}
 
 export async function collectionsFilters () {
   let params = new URL(document.location).searchParams;

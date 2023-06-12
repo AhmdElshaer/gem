@@ -190,3 +190,52 @@ li:hover,
 .collSwiper .swiper-pagination-bullet-active {
   background-color: #e35a00!important;
 }
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  gap: 12px;
+}
+
+.pagination svg {
+  font-size: large !important;
+  font-weight: bold;
+}
+.pagination > li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination > li > a,
+.pagination > li > span {
+  aspect-ratio: 1 / 1;
+  padding: 20px;
+  border-radius: 10%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination > li.active > a {
+  color: #fff;
+  background-color: #e35a00;
+  border-color: #e35a00;
+
+}
+.pagination > li > a:hover {
+  background-color: #e35a00;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 2px;
+}

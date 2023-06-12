@@ -11,14 +11,16 @@ import OrangeButton from '../ui/OrangeButton';
 
 const Footer = () => {
   return(
-    <footer className='relative z-40 bg-white'>
+    <footer className='relative container mx-auto w-full z-40 bg-white'>
       <div className="flex flex-col md:flex-row lg:flex-row w-full">
 
         <div id="left" className="w-full md:w-1/2 lg:w-1/2 flex flex-col items-center">
+
           <div className='w-full flex justify-center items-center mb-2'>
             <img className='h-36 w-36 object-cover' src={require('../imgs/Group 13642.png')} alt='logo'/>
           </div>
-          <div className='w-4/5 flex flex-col justify-center gap-2 p-4 border-t-2 font-bold text-stone-600'>
+
+          <div className='w-4/5 flex flex-col justify-center gap-4 pb-4 border-t-2 font-medium text-2xl text-stone-600'>
             <p>FOLLOW US</p>
             <p className='flex flex-row gap-2 text-2xl'>
               <AiOutlineInstagram className='hover:text-orange-500'/>
@@ -38,22 +40,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <div id="right" className="nav text-stone-700 w-full md:w-1/2 lg:w-1/2 bg-stone-100 flex flex-col py-8 px-14 justify-center">
+        <div id="right" className="nav text-stone-700 w-full md:w-1/2 lg:w-1/2 bg-stone-100 flex flex-col py-8 px-14 md:px-1 justify-center">
           <div className='mb-4 flex flex-row justify-between md:px-10 md:px-10 items-start'>
 
             <div className='flex flex-col gap-4'>
-              <p className='about font-bold'>About The GEM</p>
-              <ul className='relative text-stone-600 text-xs font-bold flex flex-col gap-4'>
-                <li>The GEM Story</li>
+              <p className='about text-2xl font-base'>About GEM</p>
+              <ul className='relative text-stone-600 text-sm font-base flex flex-col gap-4'>
                 <li>Mission and Vision</li>
+                <li>GEM Story</li>
                 <li>Partners</li>
                 <li>Board Of Trustees</li>
                 <li>Board Of Directors</li>
               </ul>
             </div>
             
-            <div className='font-bold'>
-              <ul className='flex flex-col gap-3'>
+            <div className='font-medium'>
+              <ul className='flex flex-col text-xl gap-3'>
                 <li>Contact Us</li>
                 <li>Membership</li>
                 <li>Host An Event</li>
@@ -63,7 +65,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='pt-4 border-t-2 flex justify-center items-center text-xs font-bold'>
-            <p>Near by Experience Egypt web</p>
+            <p>Go to Experience Egypt</p>
           </div>
           </div>
       </div>

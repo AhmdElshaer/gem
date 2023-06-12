@@ -13,13 +13,15 @@ const Navbar = () => {
   const [whatIsShown, setWhatIsShown] = useState(false);
 
   return(
-    <div className='flex flex-col-reverse md:flex-col lg:flex-col items-center md:items-end lg:items-end justify-center'>
+    <div className='flex flex-col-reverse md:flex-col lg:flex-col text-xl items-center md:items-end lg:items-end justify-center'>
+        
         <div className='flex items-center justify-end mt-2'>
           <p className='hover:text-orange-500'><CiSearch/></p>
           <p className='pl-4 hover:text-orange-500'><GrLanguage/></p>
           <p className='pl-4 hover:text-orange-500'><BsPerson/></p>
         </div>
-        <div className='flex flex-col gap-3 md:flex-row lg:flex-row items-center justify-center md:justify-end lg:justify-end mt-4 font-bold text-sm w-full px-2'>
+
+        <div className='flex flex-col gap-3 md:flex-row lg:flex-row items-center justify-center md:justify-end lg:justify-end mt-4 font-medium text-sm md:text-md lg:text-lg w-full px-2'>
 
           <div onMouseEnter={() => setVisitIsShown(true)} onMouseLeave={() => setVisitIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             
@@ -68,7 +70,7 @@ const Navbar = () => {
 
           <div onMouseEnter={() => setExpIsShown(true)} onMouseLeave={() => setExpIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             <div className='flex justify-between items-center w-full'>
-              <span className='mr-2 z-50'>THE GEM EXPERIENCE</span>
+              <span className='mr-2 z-50'>GEM EXPERIENCE</span>
               <MdKeyboardArrowDown/>
             </div>
             <ul className={`md:absolute lg:absolute md:left-1/2 lg:left-1/2 md:-translate-x-1/2 lg:-translate-x-1/2 md:-bottom-48 lg:-bottom-48 z-40 bg-white md:w-40 lg:w-40 w-full py-4 mt-2 rounded-lg shadow-xl ${expIsShown ? "block" : "hidden"}`}>
