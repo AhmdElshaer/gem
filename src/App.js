@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {index: true, element: <Museum />,loader: museumLoader},
       {path: 'collections', children: [
         {index: true, element: <MuseumCollections />, loader: museumCollections},
-        {path: ':itemId', element: <CollectionItem />,loader: CollectionItemLoader},
+        {path: ':itemId',id: 'collection-item', element: <CollectionItem />,loader: CollectionItemLoader},
         {path: 'collections-search', children: [
           {index: true,id: 'collections-search',element:<Suspense fallback={<p className='font-bold text-orange-500 text-3xl'>Loading</p>}><SearchCollections /></Suspense>, loader: () => import('./config/Config').then((module) => module.collectionsFilters())},
           {path: ':highlightId', element: <HighlightsDetails />, loader: highlightItemLoader},

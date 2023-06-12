@@ -9,7 +9,7 @@ const HighlightsDetails = () => {
   return(
     <div className="container mx-auto flex flex-col flex-wrab gap-10 justify-center items-start p-4 mb-16">
 
-      <div className="breadCrumb w-full flex flex-wrab justify-start items-center  gap-3 font-semibold">
+      <div className="breadCrumb w-full flex flex-wrab justify-start items-center text-xl gap-3 font-medium">
         <span onClick={()=> navigate(-1)} className="hover:bg-orange-500 hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><FaArrowLeft /></span>
         <span><NavLink to='/museum' className='p-2'>Museum</NavLink>/</span>
         <span><NavLink to='/museum/collections' className='p-2'>Collections</NavLink>/</span>
@@ -58,6 +58,22 @@ const HighlightsDetails = () => {
           <p className="font-semibold"><span>Height</span><span className="text-stone-500 ml-3">{highlightItemData.data.height} cm</span></p>
           <p className="font-semibold"><span>Width</span><span className="text-stone-500 ml-3">{highlightItemData.data.width} cm</span></p>
           <p className="font-semibold"><span>Length</span><span className="text-stone-500 ml-3">{highlightItemData.data.length} cm</span></p>
+        </div>
+      </div>
+
+      <div id="relatedArtfacts" className="highlights w-full flex flex-col justify-center items-start px-2">
+        <p className="text-4xl font-bold mb-8 text-stone-700">Related Artefacts</p>
+        <div className="grid relative gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
+          {highlightItemData.data.related_artfacts.map((item) => (
+            <div key={item.id} className="relative aspect-square truncate">
+              <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>
+
+              <div className="h-[110%] w-full p-4 absolute bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
+                <p className="font-bold">{item.title}</p>
+                <NavLink to={`/museum/collections/collections-search/${item.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+              </div>
+            </div>
+        ))}
         </div>
       </div>
     </div>

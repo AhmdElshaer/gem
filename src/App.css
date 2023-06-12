@@ -1,9 +1,53 @@
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-BOLD.OTF');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-THIN.OTF');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-THINITALIC.OTF');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-REGULAR.OTF');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-REGULARITALIC.OTF');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-MEDIUM.OTF');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-MEDIUMITALIC.OTF');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Greta';
+  src: url('/public/fonts/GRETASANSSTD-BOLDITALIC.OTF');
+  font-weight: bold;
+  font-style: italic;
+}
+
 html{
   scroll-behavior: smooth;
-
 }
 body{
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Greta';
   scroll-behavior: smooth;
 }
 .swiper-button-next::after,
