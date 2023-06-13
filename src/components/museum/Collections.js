@@ -29,7 +29,7 @@ const Collections = ({title, description, collections}) => {
             {collections.map((item) => (
               <SwiperSlide key={item.id}>
                 
-              <div className="flex flex-col orange-500 w-full h-full rounded">
+              <div className="flex flex-col orange-500 w-full h-full rounded shadow-xl py-4">
 
                 <div className="zoom w-full h-1/2 whitespace-normal truncate rounded-t-lg">
                   <img className='h-full w-full object-cover' src={item.thubmnail} alt='museum_collections'/>

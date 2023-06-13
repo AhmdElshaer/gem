@@ -56,11 +56,11 @@ const CollectionItem = () => {
         <p className="text-3xl font-bold mb-8 text-stone-700">Highlights</p>
         <div className="grid relative gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
           {collectionItemData.data.highlights.map((item) => (
-            <div key={item.id} className="relative aspect-square truncate">
+            <div key={item.id} className="relative aspect-square rounded-lg truncate">
               <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>
 
               <div className="h-[110%] w-full p-4 absolute bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
-                <p className="font-bold">{item.title}</p>
+                <p className="font-bold w-fit px-2 whitespace-normal h-fit">{item.title}</p>
                 <NavLink to={`/museum/collections/collections-search/${item.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
               </div>
             </div>
