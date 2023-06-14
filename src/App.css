@@ -54,6 +54,7 @@ body{
 .swiper-button-prev::after {
   color: white !important;
   font-size: 22px !important;
+  border-radius: 50% !important;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -72,7 +73,6 @@ body{
 }
 
 .zoom:hover {
-  color:black;
   transition: 1s;
 }
 

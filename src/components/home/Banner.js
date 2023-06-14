@@ -10,13 +10,15 @@ const Banner = (props) => {
   return(
     <div className="relative text-white mx-1 z-30" style={{height: 'calc(100vh - 130px)'}}>
 
-      <Swiper loop={true} speed={1200} navigation={true} autoplay={{delay: 2500, disableOnInteraction: false,}} pagination={{clickable: true,}} modules={[Navigation, Autoplay, Pagination]} className="relative mySwiper h-full">
+      <Swiper loop={true} speed={1200} navigation={true} 
+      autoplay={{delay: 2500, disableOnInteraction: false,}} 
+      pagination={{clickable: true,}} modules={[Navigation, Autoplay, Pagination]} className="relative mySwiper h-full">
         {props.props.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item.id} className="h-full w-full flex justify-center items-center relative">
             <img className='h-full w-full object-cover' src={item.image} alt='panner'/>
-            <div className="absolute z-40 flex flex-col justify-start items-start top-1/4 left-10 w-4/5">
-              <p className="text-4xl mb-12 font-bold">{item.title}</p>
-              <p className="mb-12">{item.description}</p>
+            <div className="container absolute z-40 flex flex-col px-4 justify-start items-start top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+              <p className="md:text-5xl text-4xl pt-10 mb-10 font-bold">{item.title}</p>
+              <p className="mb-8 md:text-lg text-md md:w-1/2">{item.description}</p>
               <OrangeButton text={item.btn_link}/>
             </div>
           </SwiperSlide>

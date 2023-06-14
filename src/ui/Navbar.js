@@ -21,7 +21,7 @@ const Navbar = () => {
           <p className='pl-4 hover:text-orange-500'><BsPerson/></p>
         </div>
 
-        <div className='flex flex-col gap-3 md:flex-row lg:flex-row items-center justify-center md:justify-end lg:justify-end mt-4 font-medium text-sm md:text-md lg:text-lg w-full px-2'>
+        <div className='flex tracking-wide flex-col gap-3 md:flex-row lg:flex-row items-center justify-center md:justify-end lg:justify-end mt-4 font-semibold text-sm md:text-md lg:text-lg w-full px-2'>
 
           <div onMouseEnter={() => setVisitIsShown(true)} onMouseLeave={() => setVisitIsShown(false)} className='relative flex flex-col md:justify-center lg:justify-center items-center w-full md:w-auto'>
             

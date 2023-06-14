@@ -9,7 +9,7 @@ const HighlightsDetails = () => {
   return(
     <div className="container mx-auto flex flex-col text-stone-700 flex-wrab gap-10 justify-center items-start p-4 mb-16">
 
-      <div className="breadCrumb w-full flex flex-wrab w-full justify-start items-center text-xl gap-3 font-medium">
+      <div className="breadCrumb w-full flex flex-wrap w-full justify-start items-center text-xl gap-3 font-medium">
         <span onClick={()=> navigate(-1)} className="hover:bg-orange-500 hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><FaArrowLeft /></span>
         <span><NavLink to='/museum' className='p-2'>Museum</NavLink>/</span>
         <span><NavLink to='/museum/collections' className='p-2'>Collections</NavLink>/</span>
