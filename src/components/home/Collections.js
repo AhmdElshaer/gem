@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 const Collections = (props) => {
 
   return(
-    <div className='h-[110vh] lg:h-[90vh] md:h-[57vh] z-30 bg-white flex flex-col gap-6 md:gap-8 items-center py-5 relative px-2'>
+    <div className='h-[110vh] lg:h-[100vh] md:h-[57vh] z-30 bg-white flex flex-col gap-6 md:gap-8 items-center py-5 relative px-2'>
       <p className="md:text-4xl text-3xl font-bold text-stone-700">Collections</p>
       <p className="md:text-lg text-md text-stone-500">A Deep-Dive the Egyptian Culture</p>
       <div className="h-full md:h-[55%] lg:h-3/5 w-[90%] md:ml-auto relative">
@@ -38,7 +38,7 @@ const Collections = (props) => {
           }}
           navigation={true}
           modules={[FreeMode, Navigation, Autoplay]}
-          className="mySwiper h-full md:h-full lg:h-full w-full shadow-2xl"
+          className="mySwiper h-full md:h-full lg:h-full w-full shadow-2xl md:shadow-none"
         >
           {props.props.map((item) => (
             <SwiperSlide key={item.id}>

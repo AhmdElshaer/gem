@@ -117,10 +117,8 @@ li:hover,
   color:#e35a00;
 }
 
-@media (max-width: 767px) {
-  .museumBanner {
-    font-size: 0.8rem;
-  }
+.museumbanner .active{
+  color: black;
 }
 
 .hoverButton{

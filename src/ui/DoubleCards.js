@@ -4,7 +4,7 @@
 const DoubleCards = (props) => {
 
   return(
-    <div className='flex flex-col md:gap-8 mb-3 md:mb-6 h-[230vh] md:h-[100vh]'>
+    <div className='flex flex-col md:gap-8 mb-3 md:mb-6 h-[230vh] md:h-[100vh] lg:h-[200vh]'>
       {props.props.map((item) => (
       <div key={item.id} className={`flex flex-col ${item.image_direction === 'left' ? 'md:flex-row lg:flex-row' : 'md:flex-row-reverse lg:flex-row-reverse'} w-full md:h-1/2 truncate whitespace-normal`}>
         <div className="zoom h-1/2 md:h-full lg:h-full w-full md:w-1/2 lg:w-1/2 truncate">

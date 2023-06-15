@@ -10,11 +10,11 @@ import { NavLink } from "react-router-dom";
 const Collections = ({title, description, collections}) => {
   
   return (
-      <div id="museum_collections" className='z-30 bg-white flex flex-col items-center py-5 relative px-2 mb-8'>
-        <p className="text-4xl font-bold mb-8">{title}</p>
-        <p className="mb-12 font-semibold px-4 text-stone-400 text-center">{description}</p>
+      <div id="museum_collections" className='z-30 bg-white flex flex-col items-center py-6 relative px-2 mb-8'>
+        <p className="md:text-4xl text-3xl font-bold mb-6 md:mb-8 text-stone-600">{title}</p>
+        <p className="mb-4 md:mb-12 font-normal md:w-[80%] md:text-xl text-base text-stone-500 text-center">{description}</p>
 
-        <div className="w-full relative flex flex-col items-center " style={{height: '468px'}}>
+        <div className="w-full relative flex flex-col items-center h-[500px] md:h-[50vh] lg:h-[70vh]">
           <Swiper
             breakpoints={{640: { slidesPerView: 1.5, spaceBetween: 30,}, 768: { slidesPerView: 2.5, spaceBetween: 30,}, 1024: {slidesPerView: 3.3, spaceBetween: 30,},}}
             freeMode={true}
@@ -36,11 +36,11 @@ const Collections = ({title, description, collections}) => {
                 </div>
 
                 <div className="flex flex-col items-start gap-3 h-1/2 w-full p-8">
-                  <p className="font-bold flex text-orange-500 text-xl w-full gap-2 justify-start items-center">
+                  <p className="font-bold flex text-orange-500 text-xl md:text-2xl w-full gap-2 justify-start items-center">
                     <span><img className="h-[2rem] object-cover " src={item.icon} alt="collections_icon"/></span>
                     <span className="">{item.title}</span>
                     </p>
-                  <p className="px-0 w-full text-xs text-ellipsis overflow-hidden ... leading-relaxed">{item.details}</p>
+                  <p className="px-0 w-full text-xs md:text-base text-stone-400 text-ellipsis overflow-hidden ... leading-relaxed">{item.details}</p>
                   <div><HoverButton text="Learn More"/></div>
                   
                 </div>
