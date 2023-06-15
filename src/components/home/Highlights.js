@@ -41,13 +41,13 @@ const Highlights = (props) => {
         style={{color: '#000000b3'}}
       >
         {props.props.map((item) => (
-          <SwiperSlide key={item.id} className="">
+          <SwiperSlide key={item?.id} className="">
           <div className="flex flex-col w-full h-full  zoom">
             <div className="h-4/5 w-full rounded-t-lg truncate">
               <img className='h-full w-full  object-cover' src={item.banner} alt='highlights'/>
             </div>
             <div className="flex flex-col items-start h-1/5 w-full text-stone-400 hover:text-stone-700 ease-in duration-300">
-              <p className="font-bold text-xl md:text-2xl w-full my-2 md:my-4 ">{item.title}</p>
+              <p className="font-bold text-xl md:text-2xl w-full my-2 md:my-4 ">{item?.title}</p>
               <p className="px-0 w-full h-1/2 text-sm">{item.details}</p>
             </div>
           </div>

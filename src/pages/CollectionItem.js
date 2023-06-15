@@ -18,11 +18,11 @@ const CollectionItem = () => {
         <span onClick={()=> navigate(-1)} className="hover:bg-orange-500 hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><FaArrowLeft /></span>
         <span><NavLink to='/museum' className='p-2'>Museum</NavLink>/</span>
         <span><NavLink to='..' className='p-2'>Collections</NavLink>/</span>
-        <span>{collectionItemData.data.title}</span>
+        <span>{collectionItemData.data?.title}</span>
       </div>
 
       <div className="w-full flex flex-col justify-center items-center">
-        <p className="text-3xl font-bold mb-8">{collectionItemData.data.title}</p>
+        <p className="text-3xl font-bold mb-8">{collectionItemData.data?.title}</p>
         <p className="mb-8 text-center font-medium">{collectionItemData.data.description}</p>
       </div>
 
@@ -39,12 +39,12 @@ const CollectionItem = () => {
         className="collSwiper aspect-square md:h-[40vh] lg:h-[60vh] w-full mb-8 "
       >
         {collectionItemData.data.slides.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item?.id}>
 
           <div className='h-full w-full rounded relative flex px-2'>
             <img className='h-full w-full rounded-lg object-cover' src={item.image} alt='collictions'/>
             <div className="w-full absolute bottom-0 text-white p-8 flex flex-col gap-6">
-              <p className="font-bold">{item.title}</p>
+              <p className="font-bold">{item?.title}</p>
               <p className="">{item.description}</p>
             </div>
           </div>
@@ -56,12 +56,12 @@ const CollectionItem = () => {
         <p className="text-3xl font-bold mb-8 text-stone-700">Highlights</p>
         <div className="grid relative gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
           {collectionItemData.data.highlights.map((item) => (
-            <div key={item.id} className="relative aspect-square rounded-lg truncate">
+            <div key={item?.id} className="relative aspect-square rounded-lg truncate">
               <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>
 
               <div className="h-[110%] w-full p-4 absolute bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
-                <p className="font-bold w-fit px-2 whitespace-normal h-fit">{item.title}</p>
-                <NavLink to={`/museum/collections/collections-search/${item.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                <p className="font-bold w-fit px-2 whitespace-normal h-fit">{item?.title}</p>
+                <NavLink preventScrollReset={false} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
               </div>
             </div>
         ))}

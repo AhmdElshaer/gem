@@ -12,17 +12,17 @@ const Experiences = ({left, right}) => {
         <div className='experience-left w-full md:w-1/2 lg:w-1/2 h-48 md:h-full lg:h-full zoom truncate whitespace-normal relative rounded md:rounded-l-lg lg:rounded-l-lg ex-hover'>
           <img className='h-full w-full object-cover' src={left.image} alt='experiences'/>
           <div className='absolute left-5 bottom-6 lg:hidden content'>
-            <p className='text-orange-500 font-medium'>{left.title}</p>
+            <p className='text-orange-500 font-medium'>{left?.title}</p>
             <p className='font-light text-sm text-white'>{left.details}</p>
           </div>
         </div>
 
         <div className='experience-right w-full md:w-1/2 lg:w-1/2 md:h-full lg:h-full flex flex-col gap-6'>
           {right.map((item) => (
-            <div key={item.id} className='zoom whitespace-normal truncate h-48 md:h-1/2 lg:h-1/2 w-full rounded md:rounded-tr-lg lg:rounded-tr-lg relative ex-hover'>
+            <div key={item?.id} className='zoom whitespace-normal truncate h-48 md:h-1/2 lg:h-1/2 w-full rounded md:rounded-tr-lg lg:rounded-tr-lg relative ex-hover'>
               <img className='h-full w-full object-cover' src={item.image} alt='experiences'/>
               <div className='absolute left-5 bottom-6 lg:hidden content'>
-              <p className='text-orange-500 font-medium'>{item.title}</p>
+              <p className='text-orange-500 font-medium'>{item?.title}</p>
               <p className='font-light text-sm text-white'>{item.details}</p>
             </div>
             </div>

@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import RootLayout from './pages/RootLayout';
@@ -9,11 +9,11 @@ import CollectionItem from './pages/CollectionItem';
 import { lazy, Suspense } from 'react';
 import HighlightsDetails from './components/museum/collections/collectionsSearch/HighlightsDetails';
 import MainGallery from './pages/MainGallery';
-// import SearchCollections from './pages/SearchCollections';
+
 
 const SearchCollections = lazy(() => import('./pages/SearchCollections'));
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {path: '/', element: <RootLayout />, children: [
     {index: true, element: <Home />, loader: homeLoader },
     {path: 'museum', children: [
@@ -32,9 +32,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+(
+      // <RouterProvider router={router}>
+      //   </RouterProvider>
+      <div>
 
-  return (
-      <RouterProvider router={router} />
+      </div>
   );
 }
 

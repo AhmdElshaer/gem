@@ -60,7 +60,7 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
                 <select ref={categoryRef} id='category' name='category' className='rounded text-stone-500 text-sm bg-transparent border-[2px]'>
                   <option className='bg-stone-300' value=''>Select</option>
                   {catFilter.map((item)=>(
-                    <option key={item.id} value={item.id} className='bg-stone-500 text-sm text-white'>{item.title}</option>
+                    <option key={item?.id} value={item?.id} className='bg-stone-500 text-sm text-white'>{item?.title}</option>
                   ))}
                 </select>
                 </Await>
@@ -74,7 +74,7 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
                 <select ref={periodRef} id='Period' name='Period' className='rounded text-stone-500 text-sm bg-transparent border-[2px]'>
                   <option className='bg-stone-300' value=''>Select</option>
                   {PeriodsFilter.map((item)=>(
-                    <option key={item.id} value={item.id} className='bg-stone-500 text-sm text-white'>{item.title}</option>
+                    <option key={item?.id} value={item?.id} className='bg-stone-500 text-sm text-white'>{item?.title}</option>
                   ))}
                 </select>
                 </Await>
@@ -88,7 +88,7 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
                 <select ref={materialRef} id='Material' name='Material' className='rounded text-stone-500 text-sm bg-transparent border-[2px]'>
                   <option className='bg-stone-300' value=''>Select</option>
                   {MatFilter.map((item)=>(
-                    <option key={item.id} value={item.id} className='bg-stone-500 text-sm text-white'>{item.title}</option>
+                    <option key={item?.id} value={item?.id} className='bg-stone-500 text-sm text-white'>{item?.title}</option>
                   ))}
                 </select>
                 </Await>
@@ -102,7 +102,7 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
                 <select ref={provRef} id='Provenance' name='Provenance' className='rounded text-stone-500 text-sm bg-transparent border-[2px]'>
                   <option className='bg-stone-300' value=''>Select</option>
                   {ProvFilter.map((item)=>(
-                    <option key={item.id} value={item.id} className='bg-stone-500 text-sm text-white'>{item.title}</option>
+                    <option key={item?.id} value={item?.id} className='bg-stone-500 text-sm text-white'>{item?.title}</option>
                   ))}
                 </select>
                 </Await>
@@ -116,7 +116,7 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
                 <select ref={galleryRef} id='Gallery' name='Gallery' className='rounded text-stone-500 text-sm bg-transparent border-[2px]'>
                   <option className='bg-stone-300' value=''>Select</option>
                   {galFilter.map((item)=>(
-                    <option key={item.id} value={item.id} className='text-sm text-white bg-stone-500'>{item.title}</option>
+                    <option key={item?.id} value={item?.id} className='text-sm text-white bg-stone-500'>{item?.title}</option>
                   ))}
                 </select>
                 </Await>
@@ -130,7 +130,7 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
                 <select ref={themeRef} id='Theme' name='Theme' className='rounded text-stone-500 text-sm bg-transparent border-[2px] '>
                   <option className='bg-stone-300 text-stone-500' value=''>Select</option>
                   {ThemesFilter.map((item)=>(
-                    <option key={item.id} value={item.id} className='text-sm text-white bg-stone-500'>{item.title}</option>
+                    <option key={item?.id} value={item?.id} className='text-sm text-white bg-stone-500'>{item?.title}</option>
                   ))}
                 </select>
                 </Await>

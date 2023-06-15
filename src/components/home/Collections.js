@@ -41,10 +41,10 @@ const Collections = (props) => {
           className="mySwiper h-full md:h-full lg:h-full w-full shadow-2xl md:shadow-none"
         >
           {props.props.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item?.id}>
             <div className='h-full w-full rounded relative flex flex-col md:flex-row md:justify-end'>
               <img className='h-[60%] md:h-full w-full md:w-2/3 lg:w-2/3 rounded object-cover' src={item.banner} alt='collictions'/>
-              <CollectionsCard title={item.title} para={item.details} />
+              <CollectionsCard title={item?.title} para={item.details} />
             </div>
             </SwiperSlide>
           ))}

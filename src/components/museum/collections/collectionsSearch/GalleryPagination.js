@@ -27,14 +27,14 @@ const GalleryPagination = ({data}) => {
   return (
     <div className="container mx-auto flex flex-col w-full justify-center items-center px-2">
       <div className="grid gap-6 mb-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center">
-        {currentdata && currentdata.map((item)=> (<div key={item.id} className="relative rounded-xl aspect-square truncate">
+        {currentdata && currentdata.map((item)=> (<div key={item?.id} className="relative rounded-xl aspect-square truncate">
               <img className='w-full h-full rounded-xl object-cover' src={item.thumbnail} alt='collections'/>
 
               <div className="h-[120%] w-full flex justify-end absolute bottom-[-22%] md:bottom-[-20%]  lg:bottom-[-20%] hover:bottom-[0px] ease-in duration-300 text-white ">
                 <div className="flex flex-col p-4 w-full gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
-                  <p className="font-bold">{item.title}</p>
-                  <p>{item.period.title}</p>
-                  <NavLink to={`/museum/collections/collections-search/${item.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                  <p className="font-bold">{item?.title}</p>
+                  <p>{item.period?.title}</p>
+                  <NavLink to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
                 </div>
               </div>
             </div>))}

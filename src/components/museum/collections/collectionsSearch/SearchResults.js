@@ -45,14 +45,14 @@ const SearchResults = () => {
 
           {collectionsSearch.length === 0 || hasError || isRouteErrorResponse(error) ? (<p className="absolute font-bold left-1/2 translate-x-[-50%] text-xl w-[200px]">There Is No Collections</p>) 
           : collectionsSearch.map((item) => (
-            <div key={item.id} className="relative aspect-square rounded-lg truncate">
+            <div key={item?.id} className="relative aspect-square rounded-lg truncate">
               <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>
 
               <div className="h-[120%] w-full flex justify-end absolute bottom-[-23%]  lg:bottom-[-22%] hover:bottom-[0px] ease-in duration-300 text-white ">
                 <div className="flex flex-col p-4 w-full gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
-                  <p className="font-bold">{item.title}</p>
-                  <p>{item.period.title}</p>
-                  <NavLink to={`/museum/collections/collections-search/${item.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                  <p className="font-bold">{item?.title}</p>
+                  <p>{item.period?.title}</p>
+                  <NavLink to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
                 </div>
               </div>
             </div>

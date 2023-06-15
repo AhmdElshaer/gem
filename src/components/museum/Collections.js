@@ -27,7 +27,7 @@ const Collections = ({title, description, collections}) => {
             className="mySwiper h-full	w-full"
           >
             {collections.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item?.id}>
                 
               <div className="flex flex-col orange-500 w-full h-full rounded shadow-xl py-4">
 
@@ -38,7 +38,7 @@ const Collections = ({title, description, collections}) => {
                 <div className="flex flex-col items-start gap-3 h-1/2 w-full p-8">
                   <p className="font-bold flex text-orange-500 text-xl md:text-2xl w-full gap-2 justify-start items-center">
                     <span><img className="h-[2rem] object-cover " src={item.icon} alt="collections_icon"/></span>
-                    <span className="">{item.title}</span>
+                    <span className="">{item?.title}</span>
                     </p>
                   <p className="px-0 w-full text-xs md:text-base text-stone-400 text-ellipsis overflow-hidden ... leading-relaxed">{item.details}</p>
                   <div><HoverButton text="Learn More"/></div>

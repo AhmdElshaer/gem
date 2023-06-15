@@ -14,10 +14,10 @@ const Banner = (props) => {
       autoplay={{delay: 2500, disableOnInteraction: false,}} 
       pagination={{clickable: true,}} modules={[Navigation, Autoplay, Pagination]} className="relative mySwiper h-full">
         {props.props.map((item) => (
-          <SwiperSlide key={item.id} className="h-full w-full flex justify-center items-center relative">
+          <SwiperSlide key={item?.id} className="h-full w-full flex justify-center items-center relative">
             <img className='h-full w-full object-cover' src={item.image} alt='panner'/>
             <div className="container absolute z-40 flex flex-col px-4 justify-start items-start top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-              <p className="md:text-5xl text-4xl pt-10 mb-10 font-bold">{item.title}</p>
+              <p className="md:text-5xl text-4xl pt-10 mb-10 font-bold">{item?.title}</p>
               <p className="mb-8 md:text-lg text-md md:w-1/2">{item.description}</p>
               <OrangeButton text={item.btn_link}/>
             </div>
