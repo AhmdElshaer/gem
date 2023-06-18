@@ -22,7 +22,7 @@ useEffect(() => {
   return(
     <div id="progressBar" className={`sticky top-0 bg-white z-50 w-full flex flex-col justify-center items-center`}>
 
-      <div className="w-full md:w-3/4 lg:w-3/4 flex flex-wrap justify-center items-center text-stone-400 text-base md:text-lg lg:text-xl py-4 px-1 museumBanner">
+      <div className="w-full md:w-3/4 lg:w-3/4 flex flex-wrap justify-center items-center text-stone-400 text-sm md:text-base lg:text-lg py-4 px-1 museumBanner">
 
         {collections.map((item) => (
           <a href={`#${item?.title.trim()}`} key={item?.id} className="hover:text-stone-700 mr-8">{item?.title}</a>

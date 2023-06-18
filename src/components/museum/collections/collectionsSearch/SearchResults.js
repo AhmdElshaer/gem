@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams, NavLink, useRouteError, isRouteErrorResponse } from "react-router-dom";
+import { useSearchParams, NavLink, useRouteError, isRouteErrorResponse, Link } from "react-router-dom";
 
 
 const SearchResults = () => {
@@ -52,7 +52,7 @@ const SearchResults = () => {
                 <div className="flex flex-col p-4 w-full gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
                   <p className="font-bold">{item?.title}</p>
                   <p>{item.period?.title}</p>
-                  <NavLink to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                  <Link preventScrollReset={false} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></Link>
                 </div>
               </div>
             </div>

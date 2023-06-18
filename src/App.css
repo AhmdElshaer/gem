@@ -52,16 +52,54 @@ body{
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: white !important;
-  font-size: 22px !important;
-  border-radius: 50% !important;
+  font-size: 27px !important;
 }
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: black;
-  background-color: orange;
+.swiper-button-next{
+  right: -7px !important;
+}
+.swiper-button-prev{
+  left: -7px !important;
+}
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+  color: #fff;
+  transition: 0.3s;
+}
+.banner .swiper-button-next:hover,
+.banner .swiper-button-prev:hover {
+  color: #e35a00;
+}
+
+.highlights .swiper-button-next,
+.highlights .swiper-button-prev{
+  color: black !important;
+  background-color: aliceblue;
+  border-radius: 10%;
+  width: 30px !important;
+  height: 50px !important;
+  transition: 0.3s;
+}
+.highlights .swiper-button-next:hover,
+.highlights .swiper-button-prev:hover{
+  color: white !important;
+  background-color: #e35a00;
+}
+
+.collections .swiper-button-next,
+.collections .swiper-button-prev{
+  color: white !important;
+  background-color: #e35a00 !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50%;
-  transition: 1s;
+  transition: 0.3s;
+}
+.collections .swiper-button-next:hover,
+.collections .swiper-button-prev:hover{
+  border-width: 1px;
+  border-color: #e35a00 !important;
+  color: #e35a00 !important;
+  background-color: transparent !important;
 }
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
@@ -139,9 +177,9 @@ li:hover,
   z-index: -1;
 }
 
-.hoverButton:hover::before{
+/* .hoverButton:hover::before{
   top: 0;
-}
+} */
 
 .orangeButton{
   overflow: hidden;

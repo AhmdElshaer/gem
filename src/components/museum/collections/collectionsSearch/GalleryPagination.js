@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 
@@ -34,7 +34,7 @@ const GalleryPagination = ({data}) => {
                 <div className="flex flex-col p-4 w-full gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
                   <p className="font-bold">{item?.title}</p>
                   <p>{item.period?.title}</p>
-                  <NavLink to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                  <Link preventScrollReset={false} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></Link>
                 </div>
               </div>
             </div>))}

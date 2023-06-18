@@ -25,8 +25,8 @@ const CollBanner = ({image, title, description}) => {
         <p className="font-base text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-[3rem] tracking-wider md:w-[60%] lg:w-[50%]">{description}</p>
       </div>
 
-      <form onSubmit={onSubmitHandler} className="absolute z-30 bottom-0 w-full h-[10vh] flex flex-row justify-center items-center gap-4 md:gap-8 lg:gap-12 backdrop-blur-md bg-black/30">
-        <input ref={searchValue} type="text" className="rounded p-3 h-[45%] w-[67%] md:w-[50%] lg:w-[40%] text-xs md:text-base lg:text-lg placeholder-shown:border-0" placeholder="Search"/>
+      <form onSubmit={onSubmitHandler} className="absolute z-30 bottom-0 w-full h-[15vh] flex flex-row justify-center items-center gap-4 md:gap-8 lg:gap-12 backdrop-blur-md bg-black/30">
+        <input ref={searchValue} type="text" className="rounded p-3 h-[45%] w-[67%] md:w-[50%] lg:w-[50%] text-xs md:text-base lg:text-lg placeholder-shown:border-0" placeholder="Search"/>
         <button className="orangeButton relative w-[20%] md:w-[15%] lg:w-[10%] text-white bg-orange-500 h-[45%] hover:bg-transparent hover:text-orange-500 rounded text-sm md:text-base lg:text-lg">Search</button>
       </form>
 

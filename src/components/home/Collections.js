@@ -11,11 +11,12 @@ import { NavLink } from "react-router-dom";
 const Collections = (props) => {
 
   return(
-    <div className='h-[110vh] lg:h-[100vh] md:h-[57vh] z-30 bg-white flex flex-col gap-6 md:gap-8 items-center py-5 relative px-2'>
+    <div className='collections mt-8 md:mt-[90px] z-30 bg-white flex flex-col gap-5 md:gap-5 xl:gap-5 items-center relative px-2'>
       <p className="md:text-4xl text-3xl font-bold text-stone-700">Collections</p>
       <p className="md:text-lg text-md text-stone-500">A Deep-Dive the Egyptian Culture</p>
       <div className="h-full md:h-[55%] lg:h-3/5 w-[90%] md:ml-auto relative">
         <Swiper
+          className="mySwiper h-[85vh] md:h-[40vh] lg:h-[60vh] w-full shadow-2xl md:shadow-none"
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -23,11 +24,11 @@ const Collections = (props) => {
             },
             768: {
               slidesPerView: 1.1,
-              spaceBetween: 40,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 1.1,
-              spaceBetween: 50,
+              spaceBetween: 30,
             },
           }}
           speed={2200}
@@ -38,7 +39,6 @@ const Collections = (props) => {
           }}
           navigation={true}
           modules={[FreeMode, Navigation, Autoplay]}
-          className="mySwiper h-full md:h-full lg:h-full w-full shadow-2xl md:shadow-none"
         >
           {props.props.map((item) => (
             <SwiperSlide key={item?.id}>

@@ -1,4 +1,4 @@
-import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
+import { NavLink, useLoaderData, useNavigate, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,7 +16,7 @@ const CollectionItem = () => {
 
       <div className="breadCrumb w-full flex justify-start items-center p-2 gap-3 font-semibold">
         <span onClick={()=> navigate(-1)} className="hover:bg-orange-500 hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><FaArrowLeft /></span>
-        <span><NavLink to='/museum' className='p-2'>Museum</NavLink>/</span>
+        <span><NavLink preventScrollReset={false} to='/museum' className='p-2'>Museum</NavLink>/</span>
         <span><NavLink to='..' className='p-2'>Collections</NavLink>/</span>
         <span>{collectionItemData.data?.title}</span>
       </div>
@@ -61,7 +61,7 @@ const CollectionItem = () => {
 
               <div className="h-[110%] w-full p-4 absolute bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
                 <p className="font-bold w-fit px-2 whitespace-normal h-fit">{item?.title}</p>
-                <NavLink preventScrollReset={false} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                <Link preventScrollReset={false} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></Link>
               </div>
             </div>
         ))}

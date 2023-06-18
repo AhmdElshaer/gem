@@ -1,4 +1,4 @@
-import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
+import { NavLink, useLoaderData, useNavigate, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
 const HighlightsDetails = () => {
@@ -86,7 +86,7 @@ const HighlightsDetails = () => {
 
               <div className="h-[110%] w-full p-4 absolute bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
                 <p className="font-bold">{item?.title}</p>
-                <NavLink to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></NavLink>
+                <Link preventScrollReset={true} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></Link>
               </div>
             </div>
         ))}

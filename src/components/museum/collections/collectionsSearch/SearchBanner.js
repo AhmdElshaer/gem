@@ -11,6 +11,8 @@ const SearchBanner = ({catFilter, ThemesFilter, PeriodsFilter, MatFilter, ProvFi
   let galleryRef = useRef();
   let themeRef = useRef();
   let keywordRef = useRef();
+
+  console.log(searchParams);
   
   const searchHandler = (e) => {
       let newSearchParams = {
