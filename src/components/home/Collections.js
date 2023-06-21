@@ -16,7 +16,7 @@ const Collections = (props) => {
       <p className="md:text-lg text-md text-stone-500">A Deep-Dive the Egyptian Culture</p>
       <div className="h-full md:h-[55%] lg:h-3/5 w-[90%] md:ml-auto relative">
         <Swiper
-          className="mySwiper h-[85vh] md:h-[40vh] lg:h-[60vh] w-full shadow-2xl md:shadow-none"
+          className="mySwiper h-[85vh] md:h-[40vh] lg:h-[65vh] w-full shadow-2xl md:shadow-none"
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -44,7 +44,7 @@ const Collections = (props) => {
             <SwiperSlide key={item?.id}>
             <div className='h-full w-full rounded relative flex flex-col md:flex-row md:justify-end'>
               <img className='h-[60%] md:h-full w-full md:w-2/3 lg:w-2/3 rounded object-cover' src={item.banner} alt='collictions'/>
-              <CollectionsCard title={item?.title} para={item.details} />
+              <CollectionsCard title={item?.title} para={item.details} id={item?.id} />
             </div>
             </SwiperSlide>
           ))}

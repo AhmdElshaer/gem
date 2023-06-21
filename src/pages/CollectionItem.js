@@ -14,11 +14,11 @@ const CollectionItem = () => {
   return(
     <div className="container mx-auto flex flex-col justify-center items-center mb-16">
 
-      <div className="breadCrumb w-full flex justify-start items-center p-2 gap-3 font-semibold">
-        <span onClick={()=> navigate(-1)} className="hover:bg-orange-500 hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><FaArrowLeft /></span>
+      <div className="breadCrumb w-full flex flex-wrap w-full justify-start items-center text-xl md:text-2xl md:gap-3 font-normal">
+        <span onClick={()=> navigate(-1)} className="hover:bg-orange-500 shadow-xl hover:text-white ease-in duration-150 rounded w-9 h-9 flex justify-center items-center text-xl "><FaArrowLeft /></span>
         <span><NavLink preventScrollReset={false} to='/museum' className='p-2'>Museum</NavLink>/</span>
         <span><NavLink to='..' className='p-2'>Collections</NavLink>/</span>
-        <span>{collectionItemData.data?.title}</span>
+        <span className="pl-2">{collectionItemData.data?.title}</span>
       </div>
 
       <div className="w-full flex flex-col justify-center items-center">

@@ -17,7 +17,7 @@ const HighlightsDetails = () => {
         <span>{highlightItemData.data?.title}</span>
       </div>
 
-      <div className="font-bold text-4xl p-8">{highlightItemData.data?.title}</div>
+      <div className="font-bold text-3xl md:text-4xl p-4 md:p-8">{highlightItemData.data?.title}</div>
 
       <div className="w-full md:h-[700px] flex flex-col md:flex-row gap-10">
 
@@ -84,9 +84,9 @@ const HighlightsDetails = () => {
             <div key={item?.id} className="relative aspect-square truncate">
               <img className='w-full h-full rounded-lg object-cover' src={item.thumbnail} alt='collections'/>
 
-              <div className="h-[110%] w-full p-4 absolute bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
+              <div className="h-[110%] w-full p-4 whitespace-pre-line absolute bottom-[-12%] md:bottom-[-9%] hover:bottom-[0px] ease-in duration-300 text-white flex flex-col gap-4 justify-end items-center bg-gradient-to-b from-transparent via-transparent to-stone-500">
                 <p className="font-bold">{item?.title}</p>
-                <Link preventScrollReset={true} to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></Link>
+                <Link to={`/museum/collections/collections-search/${item?.id}`}><p className="underline underline-offset-3 text-sm">See More Details</p></Link>
               </div>
             </div>
         ))}
